@@ -295,6 +295,6 @@ communication between service container and host runner
 
   ```
 
-
-
 ## module summary
+
+![alt text](image-4.png)
