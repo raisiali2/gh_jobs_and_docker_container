@@ -87,6 +87,14 @@ jobs:
 
 ## service containers - theory
 
+![alt text](image-3.png)
+
+if you want to run a testing container on the production environment dataset for manipulation there will be problem the solution is to use a testing database using the service container which allow as to run another service side by side the container hosted by runner
+example:
+hosts a testing database
+
+job steps can communicate with service containers (and the service exposed by them)
+
 ## adding services (via service containers)
 
 ## communication between jobs & service containers
