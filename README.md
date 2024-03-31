@@ -178,22 +178,24 @@ there are two scenario for this
     test:
         environment: testing
         runs-on: ubuntu-latest
-        container: 
-        image: node:16
+        #container: 
+        #image: node:16
         # here we can define env vars if image needed
         # env:
         env:
         MONGODB_CONNECTION_PROTOCOL: mongodb+srv
-        MONGODB_CLUSTER_ADDRESS: `mongodb`
+        MONGODB_CLUSTER_ADDRESS: 127.0.0.1:`27017`
         MONGODB_USERNAME: root
         MONGODB_PASSWORD: example
         PORT: 8080
         services:
-        mongodb:
-            image: `mongodb`
+          `mongodb:`
+            image: mongo
             env:
-            mongo_initdb_root_username: root
-            mongo_initdb_root_password: example
+                mongo_initdb_root_username: root
+                mongo_initdb_root_password: example
+            port:
+              - `27017:27017`
 
         steps:
         - name: Get Code
